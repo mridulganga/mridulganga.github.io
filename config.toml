@@ -1,0 +1,36 @@
+baseURL = "http://mridulganga.github.io/"
+languageCode = "en-us"
+title = "MG Blog"
+theme="codex"
+
+[params]
+  github = "https://github.com/mridulganga"
+  gitlab = "https://gitlab.com/mridulganga"
+  instagram = "https://www.instagram.com/mridulkepler"
+  linkedin = "https://www.linkedin.com/in/mridul-ganga-03326aa2"
+  telegram = "https://t.me/mridulganga"
+  iconOrder = ["Gitlab", "GitHub", "Instagram", "Linkedin", "Telegram"]
+  showPageTitleInTOC = true
+
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+    
+  # Set to false to disallow raw HTML in markdown files
+  [markup.goldmark.renderer]
+      unsafe = true
+
+
+# Controls the navigation
+[[menu.main]]
+  identifier = "about"
+  name = "@mg"
+  title = "mridulganga"
+  url = "/"
+
+[[menu.main]]
+  identifier = "blog"
+  name = "blog"
+  title = "Blog"
+  url = "/blog"
