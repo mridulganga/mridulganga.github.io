@@ -1,19 +1,19 @@
-name: hugo-latest-cd
+name: Deploy HUGO to GitHub Pages
 
 on:
   push:
     branches:
-      - master
+    - master
 
 jobs:
-  build:
-
+  hugo-deploy-gh-pages:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🛎 Check out master
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 1
-      - name: 🚀 Build and deploy
-        uses: victoriadrake/hugo-latest-cd@master
+    - uses: actions/checkout@master
+    - name: hugo-deploy-gh-pages
+      uses: linuxsuren/surenpi@master
+      env:
+        GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+        HUGO_VERSION: "0.53"
+        WEBSITE_GIT: "git@github.com:mridulganga/mridulganga.github.io.git"
+        WEBSITE_DIR: "mridulganga.github.io"
