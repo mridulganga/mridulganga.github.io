@@ -10,6 +10,8 @@ math: false
 toc: false
 ---
 
+![credits: Lauren Rowlands](/images/nicecat.jpg)
+
 # Welcome to my blog
 
 I have tried out a lot of platforms online like wordpress, weebly, wix, tumblr, etc.

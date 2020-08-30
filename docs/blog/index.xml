@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on MG Blog</title>
+    <link>http://mridulganga.github.io/blog/</link>
+    <description>Recent content in Blogs on MG Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Aug 2020 18:25:51 +0530</lastBuildDate>
+    
+	<atom:link href="http://mridulganga.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What if we could change the weather?</title>
+      <link>http://mridulganga.github.io/blog/weather-change/</link>
+      <pubDate>Sun, 30 Aug 2020 18:25:51 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/weather-change/</guid>
+      <description>Imagine if humans had control of the weather! There would be no floods or hurricanes. Farming would become much more easy. We could reverse climate change and bring any kind of weather in any region. There won’t be any extreme hot or cold weathers. There are many possibilities, but who will control the weather? What kind of weather would everyone like? How can we possibly control the weather? Could there be side effects and downsides to this?</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>http://mridulganga.github.io/blog/first-post/</link>
+      <pubDate>Sun, 30 Aug 2020 18:13:51 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/first-post/</guid>
+      <description>Welcome to my blog I have tried out a lot of platforms online like wordpress, weebly, wix, tumblr, etc. This is the next step. :)
+What will I post here? Did not think of anything yet. The posts can range from thought experiments, code guides and other stuff.</description>
+    </item>
+    
+  </channel>
+</rss>
