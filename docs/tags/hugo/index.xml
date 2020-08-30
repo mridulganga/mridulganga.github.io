@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on MG Blog</title>
+    <link>http://mridulganga.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on MG Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Aug 2020 18:13:51 +0530</lastBuildDate>
+    
+	<atom:link href="http://mridulganga.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Post</title>
+      <link>http://mridulganga.github.io/blog/first-post/</link>
+      <pubDate>Sun, 30 Aug 2020 18:13:51 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/first-post/</guid>
+      <description>Welcome to my blog I have tried out a lot of platforms online like wordpress, weebly, wix, tumblr, etc. This is the next step. :)
+What will I post here? Did not think of anything yet. The posts can range from thought experiments, code guides and other stuff.</description>
+    </item>
+    
+  </channel>
+</rss>
