@@ -6,10 +6,20 @@
     <description>Recent content on MG Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2020 20:14:45 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 01:26:55 +0530</lastBuildDate>
     
 	<atom:link href="http://mridulganga.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WebRTC using Peerjs</title>
+      <link>http://mridulganga.github.io/blog/webrtc-peerjs/</link>
+      <pubDate>Tue, 01 Sep 2020 01:26:55 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/webrtc-peerjs/</guid>
+      <description>What does it mean when we say peer to peer? P2P is direct connection between two devices to transfer data to-and-fro without the need of a central server. The traffic does not go to or from any central server, but directly from one device to the other.
+What is WebRTC? WebRTC stands for web real-time communications. WebRTC was not supported by all the browsers until recently and is also available in most mobile browsers.</description>
+    </item>
     
     <item>
       <title>Kubernetes what and how</title>

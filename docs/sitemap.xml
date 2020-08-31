@@ -4,12 +4,42 @@
   
   <url>
     <loc>http://mridulganga.github.io/</loc>
-    <lastmod>2020-08-31T20:14:45+05:30</lastmod>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
   </url>
   
   <url>
     <loc>http://mridulganga.github.io/blog/</loc>
-    <lastmod>2020-08-31T20:14:45+05:30</lastmod>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/p2p/</loc>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/peerjs/</loc>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/</loc>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/tech/</loc>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/webrtc/</loc>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/blog/webrtc-peerjs/</loc>
+    <lastmod>2020-09-01T01:26:55+05:30</lastmod>
   </url>
   
   <url>
@@ -24,16 +54,6 @@
   
   <url>
     <loc>http://mridulganga.github.io/blog/basics-k8s/</loc>
-    <lastmod>2020-08-31T20:14:45+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mridulganga.github.io/tags/</loc>
-    <lastmod>2020-08-31T20:14:45+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mridulganga.github.io/tags/tech/</loc>
     <lastmod>2020-08-31T20:14:45+05:30</lastmod>
   </url>
   
