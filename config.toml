@@ -2,6 +2,7 @@ baseURL = "http://mridulganga.github.io/"
 languageCode = "en-us"
 title = "MG Blog"
 theme="codex"
+disqusShortname="mridulganga-github-io"
 
 [params]
   github = "https://github.com/mridulganga"
