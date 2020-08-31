@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on MG Blog</title>
+    <link>http://mridulganga.github.io/tags/devops/</link>
+    <description>Recent content in devops on MG Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Aug 2020 20:14:45 +0530</lastBuildDate>
+    
+	<atom:link href="http://mridulganga.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kubernetes what and how</title>
+      <link>http://mridulganga.github.io/blog/basics-k8s/</link>
+      <pubDate>Mon, 31 Aug 2020 20:14:45 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/basics-k8s/</guid>
+      <description>Kubernetes is a relatively new term which is in talks a lot. In this article I will try to explain what kubernetes is and how we can quickly get started with it.
+Before you start  you should have some basic understanding of linux you should know what are containers some docker knowledge would be useful  What are containers? Containers can be seen as lightweight VMs. Though they are much different.</description>
+    </item>
+    
+  </channel>
+</rss>
