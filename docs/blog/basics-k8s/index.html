@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Kubernetes what and how | MG Blog</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.2cb93c91050d1853bf971cc31e00122edd6e0f405aa1de3b7f8ef67ea3b5a79a.css" integrity="sha256-LLk8kQUNGFO/lxzDHgASLt1uD0Baod47f472fqO1p5o="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.fdde0f86e0faf7ffd9473619448280730a1538785adc0e7b627c9499f55724bc.css" integrity="sha256-/d4PhuD69//ZRzYZRIKAcwoVOHha3A57YnyUmfVXJLw="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/mridulganga.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Kubernetes what and how",
+      "headline" : "Kubernetes what and how",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-08-31 20:14:45 \x2b0530 IST",
+      "dateModified" : "2020-08-31 20:14:45 \x2b0530 IST",
+      "url" : "http:\/\/mridulganga.github.io\/blog\/basics-k8s\/",
+      "wordCount" : "1053",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">@mg</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Kubernetes what and how</h1>
+            <time datetime="2020-08-31 20:14:45 &#43;0530 IST" class="post__date">Aug 31 2020</time> 
+          </header>
+          <article class="post__content">
+              
+<p>Kubernetes is a relatively new term which is in talks a lot. In this article I will try to explain what
+kubernetes is and how we can quickly get started with it.</p>
+<h3 id="before-you-start">Before you start<a class="anchor" href="#before-you-start">#</a></h3>
+<ul>
+<li>you should have some basic understanding of linux</li>
+<li>you should know what are containers</li>
+<li>some docker knowledge would be useful</li>
+</ul>
+<h2 id="what-are-containers">What are containers?<a class="anchor" href="#what-are-containers">#</a></h2>
+<p>Containers can be seen as lightweight VMs. Though they are much different.
+When we want to run our application in a VM - we need to install an OS and application requirements,
+following which we can run our application. Doing this takes a lot of time, space and a lot of processing
+power and memory goes to waste in maintaining the OS.</p>
+<p>What if we could only package our application with the requirments and run them anywhere? thats what containers
+are for. Containers generally use a base image (ubuntu, python, golang etc) and you can install your
+application requirements over it. For doing this we make use of a <code>Dockerfile</code>. This is where we specify
+the base image, the ports, the requirements and application files etc. So, after writing the Dockerfile -
+we build the docker image, to manage the docker images we make use of docker registries (can be local
+or somewhere in cloud). Later we can spawn as many containers from the registry images.</p>
+<p>Explaining more about docker is not in scope of this article but check <a href="https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf">this cheatsheet</a> for most commonly used docker commands.</p>
+<p>Sample Dockerfile for a simple flask application</p>
+<pre><code class="language-dockerfile"># Dockefile
+FROM python:3
+
+WORKDIR /usr/src/app
+
+COPY . .
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
+CMD [ &quot;python&quot;, &quot;./main.py&quot; ]
+</code></pre>
+<p>So, now we know that docker provides an easy and faster way to package and run applications.
+But, we can only run docker on one machine at a time. That&rsquo;s where kubernetes comes in.</p>
+<h2 id="what-is-kubernetes">what is kubernetes?<a class="anchor" href="#what-is-kubernetes">#</a></h2>
+<p>Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. Thats the technical definition.
+In more easy terms - we manage the lifecycle of containers accross multiple machines using kubernetes (orchestration).</p>
+<p>To know more about kubernetes <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">check this very nice documentation</a></p>
+<p>Kubernetes manages all of its resources using yaml files. There are many resources in kubernetes which help
+making and running an application, scaling, managing access, routes etc.</p>
+<h3 id="basic-resource-types">Basic Resource Types<a class="anchor" href="#basic-resource-types">#</a></h3>
+<ul>
+<li>pods  (synonymous to containers)</li>
+<li>deployments   (everything needed to run the application)</li>
+<li>services  (defines ports and load balancers for application)</li>
+</ul>
+<p>The above resouce types are the most basic ones we need to run and access our application.
+We also make use of other resources like - nodes, daemon set, secrets, config maps, ingress, volume resources etc.</p>
+<p>We can spend a week to discuss and know what and how to use all the resource types, but lets jump in and see
+how to deploy a simple application.</p>
+<h2 id="deployment">Deployment<a class="anchor" href="#deployment">#</a></h2>
+<pre><code class="language-yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-deployment
+  labels:
+    app: appname
+# below starts the deployment spec
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: appname
+  template:
+    metadata:
+      labels:
+        app: appname
+    # below starts the pod spec
+    spec:
+      containers:
+        - name: appname
+          image: &quot;nginx&quot;
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+</code></pre>
+<p>To explain the above fields -</p>
+<p>apiVersion - version of kubernetes resource in use, depending on the version, the yaml format may change</p>
+<p>kind - the type of kubernetes resource (deployment, service etc)</p>
+<p>metadata
+name - name of the deployment
+labels - labels of the deployment. this is used to map this deployment with other resources like a service.</p>
+<p>spec - configuration of the deployment/ pod/ service the format depends on the kind</p>
+<p>replicas - number of pods to create (horizontal scaling)</p>
+<p>selector - used to map resources together (using the labels), if deployment has a label <code>app: app1</code>
+we can then use the following in a service to map the service to the deployment. We can use multiple labels.</p>
+<pre><code class="language-yaml">selector:
+    macthLabels:
+        app: app1
+</code></pre>
+<p>template - this is present in a deployment and this is where we define our pod config
+we tell the metadata and labels like we did for deployment along with the spec (for the pod)</p>
+<p>Inside the pod spec we have list of containers with relevant info(name, image, env, ports, volumes etc)</p>
+<h2 id="service">Service<a class="anchor" href="#service">#</a></h2>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+  labels:
+    app: appname
+spec:
+  type: NodePort   # ClusterIP/ LoadBalancer
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: appname
+
+</code></pre>
+<p>In the above example the spec is different, Service only takes care of the port mappings.
+The other thing we see is the selector - this is used to map the service to the deployment.
+So if the deployment created 3 pods (replicas), our service will automatically create a load balancer,
+and you will be able to access the application on <code>app-service:80</code>.</p>
+<h3 id="service-types">Service Types<a class="anchor" href="#service-types">#</a></h3>
+<ul>
+<li>ClusterIP - this creates a internal loadBalancer for the pods, this is not accessable from outside our kubernetes environment.</li>
+<li>NodePort - kubernetes can run on multiple machines(nodes) NodePort exposes our service to a port on the Node(single or multiple)</li>
+<li>LoadBalancer - create an external service load balancer (this is not used as much, we rather use ingress)</li>
+</ul>
+<h2 id="running-kubernetes-on-linux-machine">Running kubernetes on linux machine<a class="anchor" href="#running-kubernetes-on-linux-machine">#</a></h2>
+<p>Now that we have yaml files ready to be deployed to a kubernetes cluster, lets install kubernetes on local linux machine.</p>
+<h3 id="options-flavours">Options (Flavours)<a class="anchor" href="#options-flavours">#</a></h3>
+<ul>
+<li>minikibe</li>
+<li>microk8s</li>
+<li>using kubeadm cli tool</li>
+<li>k3s (smallest and easiest)</li>
+</ul>
+<p>We will use k3s for our usecase. It&rsquo;s lightweight and easiest to setup.</p>
+<h3 id="install-k3s--">Install k3s -<a class="anchor" href="#install-k3s--">#</a></h3>
+<pre><code class="language-bash">curl -sfL https://get.k3s.io | sh -
+# installation done, check if it works
+k3s kubectl get node
+# more info at https://k3s.io/
+</code></pre>
+<h3 id="deploy-deployment-and-service">Deploy deployment and service<a class="anchor" href="#deploy-deployment-and-service">#</a></h3>
+<p>Now we have a kubernetes cluster running locally. Save the above deployment yaml and service yaml to files <code>deployment.yaml</code> and <code>service.yaml</code>. Then run the following command to apply the changes in the cluster -</p>
+<pre><code class="language-bash"># apply
+k3s kubectl apply -f deployment.yaml
+k3s kubectl apply -f service.yaml
+# check if resources were created
+k3s kubectl get deploy
+k3s kubectl get pod
+k3s kubectl get svc
+</code></pre>
+<h4 id="kubectl">kubectl</h4>
+<p>kubectl can also be installed as a standalone tool from <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">here</a>.
+to know about more kubectl commands try -</p>
+<pre><code class="language-bash">k3s kubectl help
+</code></pre>
+<h3 id="verify-application-is-running">Verify application is running<a class="anchor" href="#verify-application-is-running">#</a></h3>
+<p>If the deployment and service got created without errors, we should now be able to access it on
+<a href="http://localhost">http://localhost</a></p>
+<h2 id="other-useful-resources--">Other useful resources -<a class="anchor" href="#other-useful-resources--">#</a></h2>
+<ul>
+<li><a href="https://github.com/nginxinc/kubernetes-ingress/blob/master/examples/complete-example/cafe-ingress.yaml">ingress example</a></li>
+<li><a href="https://helm.sh/">helm</a></li>
+<li><a href="https://prometheus.io/">prometheus</a></li>
+<li><a href="https://grafana.com/">grafana</a></li>
+<li><a href="https://rancher.com/">rancher</a></li>
+</ul>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="http://mridulganga.github.io/blog/weather-change/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">What if we could change the weather?</span>
+    </a>
+  
+
+  
+</div>
+
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mridulganga-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="Gitlab"
+         href="https://gitlab.com/mridulganga"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://mridulganga.github.io/svg/gitlab.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/mridulganga"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://mridulganga.github.io/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="Instagram"
+         href="https://www.instagram.com/mridulkepler"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://mridulganga.github.io/svg/instagram.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="Linkedin"
+         href="https://www.linkedin.com/in/mridul-ganga-03326aa2"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://mridulganga.github.io/svg/linkedin.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="Telegram"
+         href="https://t.me/mridulganga"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://mridulganga.github.io/svg/telegram.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p></p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
