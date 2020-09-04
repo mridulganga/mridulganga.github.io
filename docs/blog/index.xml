@@ -6,37 +6,10 @@
     <description>Recent content in Blogs on MG Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Sep 2020 20:16:27 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 20:15:23 +0530</lastBuildDate>
     
 	<atom:link href="http://mridulganga.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Temporal Paradoxes</title>
-      <link>http://mridulganga.github.io/blog/temporal-paradoxes/</link>
-      <pubDate>Fri, 04 Sep 2020 20:16:27 +0530</pubDate>
-      
-      <guid>http://mridulganga.github.io/blog/temporal-paradoxes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>No Writing</title>
-      <link>http://mridulganga.github.io/blog/no-writing/</link>
-      <pubDate>Fri, 04 Sep 2020 20:16:01 +0530</pubDate>
-      
-      <guid>http://mridulganga.github.io/blog/no-writing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Earth Submerged</title>
-      <link>http://mridulganga.github.io/blog/earth-submerged/</link>
-      <pubDate>Fri, 04 Sep 2020 20:15:36 +0530</pubDate>
-      
-      <guid>http://mridulganga.github.io/blog/earth-submerged/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Simple systemd on Linux</title>
