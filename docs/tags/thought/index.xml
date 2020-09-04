@@ -6,10 +6,20 @@
     <description>Recent content in thought on MG Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2020 18:25:51 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 17:59:14 +0530</lastBuildDate>
     
 	<atom:link href="http://mridulganga.github.io/tags/thought/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What if there was no Gravity?</title>
+      <link>http://mridulganga.github.io/blog/no-gravity/</link>
+      <pubDate>Fri, 04 Sep 2020 17:59:14 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/no-gravity/</guid>
+      <description>We know that gravity is a force of attraction between two bodies due to their masses. More the mass of a body, higher the gravitational force it exerts. Gravity is what keeps us on the ground (not letting us fly into space when we jump off the ground).
+What happens without gravity in space? We have seen clips from the space station. Due to lack of gravity, astronauts are able to fly around the space station.</description>
+    </item>
     
     <item>
       <title>What if we could change the weather?</title>
