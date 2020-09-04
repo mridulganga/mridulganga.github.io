@@ -12,8 +12,8 @@ toc: true
 
 A temporal paradox, time paradox, or time travel paradox is an apparent contradiction, or logical contradiction associated with the idea of time and time travel.
 
-## Casual Loop
-The casual loop is a paradox in which a future event causes the past event which leads to the future event. For example a billiard ball moves to a time travel machine and travels to its past and strikes the past self towards the time machine. The billard ball will keep traveling to its past and striking its past self. This is a classic example of a Casual loop.
+## Causal Loop
+The causal loop is a paradox in which a future event causes the past event which leads to the future event. For example a billiard ball moves to a time travel machine and travels to its past and strikes the past self towards the time machine. The billard ball will keep traveling to its past and striking its past self. This is a classic example of a Causal loop.
 
 ## Predestination Paradox
 This is when actions of the time travel become part of the history and ultimately causes the event he/she is trying to prevent to take place. Destination is predetermined and we can't change it even if we try. If someone's lover dies in a car accident, they travel back in time to reach their lover as soon as possible on the accident spot only to find out that they were the one who caused it. This is often associated with self-healing hypothesis - events altered by a time traveler will cause another chain of events which will cause the present to remain the same (time self heals itself). 
