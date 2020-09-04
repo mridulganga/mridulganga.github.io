@@ -7,7 +7,7 @@ keywords: []
 draft: false
 tags: ["thought","time","paradox"]
 math: false
-toc: false
+toc: true
 ---
 
 A temporal paradox, time paradox, or time travel paradox is an apparent contradiction, or logical contradiction associated with the idea of time and time travel.
