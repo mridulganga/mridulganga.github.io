@@ -7,7 +7,7 @@ keywords: []
 draft: false
 tags: ["thought"]
 math: false
-toc: false
+toc: true
 ---
 
 Imagine if humans had control of the weather! There would be no floods or hurricanes. Farming would become much more easy. We could reverse climate change and bring any kind of weather in any region. There won’t be any extreme hot or cold weathers. There are many possibilities, but who will control the weather? What kind of weather would everyone like?
