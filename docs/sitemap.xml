@@ -4,7 +4,52 @@
   
   <url>
     <loc>http://mridulganga.github.io/</loc>
-    <lastmod>2020-09-04T17:59:14+05:30</lastmod>
+    <lastmod>2020-09-04T20:16:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/blog/</loc>
+    <lastmod>2020-09-04T20:16:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/blog/temporal-paradoxes/</loc>
+    <lastmod>2020-09-04T20:16:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/blog/no-writing/</loc>
+    <lastmod>2020-09-04T20:16:01+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/blog/earth-submerged/</loc>
+    <lastmod>2020-09-04T20:15:36+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/flask/</loc>
+    <lastmod>2020-09-04T20:15:23+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/blog/systemd-basic/</loc>
+    <lastmod>2020-09-04T20:15:23+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/systemd/</loc>
+    <lastmod>2020-09-04T20:15:23+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/</loc>
+    <lastmod>2020-09-04T20:15:23+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mridulganga.github.io/tags/tech/</loc>
+    <lastmod>2020-09-04T20:15:23+05:30</lastmod>
   </url>
   
   <url>
@@ -13,17 +58,7 @@
   </url>
   
   <url>
-    <loc>http://mridulganga.github.io/blog/</loc>
-    <lastmod>2020-09-04T17:59:14+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mridulganga.github.io/tags/gravity/</loc>
-    <lastmod>2020-09-04T17:59:14+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mridulganga.github.io/tags/</loc>
     <lastmod>2020-09-04T17:59:14+05:30</lastmod>
   </url>
   
@@ -39,11 +74,6 @@
   
   <url>
     <loc>http://mridulganga.github.io/tags/p2p/</loc>
-    <lastmod>2020-09-04T15:42:04+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mridulganga.github.io/tags/tech/</loc>
     <lastmod>2020-09-04T15:42:04+05:30</lastmod>
   </url>
   
