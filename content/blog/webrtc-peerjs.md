@@ -7,7 +7,7 @@ keywords: []
 draft: false
 tags: ["tech","p2p","webrtc","peerjs"]
 math: false
-toc: false
+toc: true
 ---
 
 ## What does it mean when we say peer to peer?

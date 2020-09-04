@@ -7,7 +7,7 @@ keywords: []
 draft: false
 tags: ["kubernetes","devops","tech"]
 math: false
-toc: false
+toc: true
 ---
 
 Kubernetes is a relatively new term which is in talks a lot. In this article I will try to explain what

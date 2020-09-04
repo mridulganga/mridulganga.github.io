@@ -6,10 +6,21 @@
     <description>Recent content on MG Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 01:26:55 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 15:42:04 +0530</lastBuildDate>
     
 	<atom:link href="http://mridulganga.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WebRTC, what&#39;s that?</title>
+      <link>http://mridulganga.github.io/blog/webrtc-basics/</link>
+      <pubDate>Fri, 04 Sep 2020 15:42:04 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/webrtc-basics/</guid>
+      <description>Authors: Iresh Sharma &amp;amp; Mridul Ganga
+What is WebRTC? WebRTC stands for web real-time communication, it is an open standard for real-time communications over the internet. With Webrtc you can implement realtime video, voice and data transfer between various peers, this technology is available for almost any browser and provides native clients for most platforms including android and iOS.
+What can we do with WebRTC? The application of WebRTC can range from anywhere between a simple chatting application, to full-fledged audio and video conferencing applications, file transfer applications etc.</description>
+    </item>
     
     <item>
       <title>WebRTC using Peerjs</title>
