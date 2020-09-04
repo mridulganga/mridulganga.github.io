@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>paradox on MG Blog</title>
+    <link>http://mridulganga.github.io/tags/paradox/</link>
+    <description>Recent content in paradox on MG Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Sep 2020 20:43:41 +0530</lastBuildDate>
+    
+	<atom:link href="http://mridulganga.github.io/tags/paradox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Most popular Temporal Paradoxes</title>
+      <link>http://mridulganga.github.io/blog/temporal-paradoxes/</link>
+      <pubDate>Fri, 04 Sep 2020 20:43:41 +0530</pubDate>
+      
+      <guid>http://mridulganga.github.io/blog/temporal-paradoxes/</guid>
+      <description>A temporal paradox, time paradox, or time travel paradox is an apparent contradiction, or logical contradiction associated with the idea of time and time travel.
+Casual Loop The casual loop is a paradox in which a future event causes the past event which leads to the future event. For example a billiard ball moves to a time travel machine and travels to its past and strikes the past self towards the time machine.</description>
+    </item>
+    
+  </channel>
+</rss>

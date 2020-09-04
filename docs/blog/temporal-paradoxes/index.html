@@ -2,11 +2,11 @@
 <html lang="en-us">
 
 <head>
-  <title>Simple systemd on Linux | MG Blog</title>
+  <title>Most popular Temporal Paradoxes | MG Blog</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
-  <meta name="description" content="A simple example for systemd">
+  <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -48,9 +48,9 @@
             "@id": "http:\/\/mridulganga.github.io\/"
       },
       "articleSection" : "blog",
-      "name" : "Simple systemd on Linux",
-      "headline" : "Simple systemd on Linux",
-      "description" : "A simple example for systemd",
+      "name" : "Most popular Temporal Paradoxes",
+      "headline" : "Most popular Temporal Paradoxes",
+      "description" : "",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -58,10 +58,10 @@
       "accountablePerson" : "",
       "copyrightHolder" : "",
       "copyrightYear" : "2020",
-      "datePublished": "2020-09-04 20:15:23 \x2b0530 IST",
-      "dateModified" : "2020-09-04 20:15:23 \x2b0530 IST",
-      "url" : "http:\/\/mridulganga.github.io\/blog\/systemd-basic\/",
-      "wordCount" : "399",
+      "datePublished": "2020-09-04 20:43:41 \x2b0530 IST",
+      "dateModified" : "2020-09-04 20:43:41 \x2b0530 IST",
+      "url" : "http:\/\/mridulganga.github.io\/blog\/temporal-paradoxes\/",
+      "wordCount" : "520",
       "keywords" : ["Blog"]
     }
   
@@ -103,81 +103,26 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">Simple systemd on Linux</h1>
-            <time datetime="2020-09-04 20:15:23 &#43;0530 IST" class="post__date">Sep 4 2020</time> 
+            <h1 id="post__title">Most popular Temporal Paradoxes</h1>
+            <time datetime="2020-09-04 20:43:41 &#43;0530 IST" class="post__date">Sep 4 2020</time> 
           </header>
           <article class="post__content">
               
-<p>Below is a super simple guide to creating a systemd service on linux. Systemd is not yet supported on all the linux systems, but it&rsquo;s popular and easy to use.</p>
-<h2 id="what-is-systemd">What is systemd?<a class="anchor" href="#what-is-systemd">#</a></h2>
-<p>systemd is a Linux initialization system and service manager that includes features like on-demand starting of daemons, mount and automount point maintenance, snapshot support, and processes tracking using Linux control groups.</p>
-<p>In simple terms, it helps us manage the lifecycle of services. You can add services to startup jobs, if your services die, it can auto restart and much more.</p>
-<h2 id="making-a-simple-flask-application-our-service">Making a simple flask application (our service)<a class="anchor" href="#making-a-simple-flask-application-our-service">#</a></h2>
-<p>Requirements:</p>
-<ul>
-<li>python3 installed</li>
-<li>pip3 installed</li>
-</ul>
-<p>Install flask using pip3</p>
-<pre><code class="language-bash">sudo pip3 install flask
-</code></pre>
-<h3 id="make-a-basic-flask-application">Make a basic flask application<a class="anchor" href="#make-a-basic-flask-application">#</a></h3>
-<p>Make a file <code>main.py</code>, place it in any folder ex - <code>/home/mridul/main.py</code> and add the following contents in it.</p>
-<pre><code class="language-python">from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-app.run(port=8000)
-</code></pre>
-<h3 id="run-and-test-the-flask-app">Run and test the flask app<a class="anchor" href="#run-and-test-the-flask-app">#</a></h3>
-<p>To run out flask server -</p>
-<pre><code class="language-bash">/usr/bin/python3 /home/mridul/main.py
-</code></pre>
-<p>To test if our application is running -</p>
-<pre><code class="language-bash">curl http://localhost:8000
-</code></pre>
-<p>You should be able to see Hello World! in the curl output.</p>
-<h2 id="making-a-systemd-entry">Making a systemd entry<a class="anchor" href="#making-a-systemd-entry">#</a></h2>
-<p>To begin with the systemd service entry will be stored in <code>/etc/systemd/system/</code>
-So, create a new file <code>/etc/systemd/system/flaskapp.service</code></p>
-<pre><code class="language-ini">[Unit]
-Description=Simple flask app service
-After=network.target
-StartLimitIntervalSec=0
-
-[Service]
-Type=simple
-Restart=always
-RestartSec=1
-User=mridul
-ExecStart=/usr/bin/python3 /home/mridul/main.py
-
-[Install]
-WantedBy=multi-user.target
-</code></pre>
-<p>Most of the above fields are easy to understand. The <code>After</code> field is used to start our service only after the network service runs. We can also put something else like <code>mysql.target</code> to run it after mysql service runs.</p>
-<p>In the <code>User</code> field, we need to provice which user should the service be run from, for our example we can run it from my user i.e. <code>mridul</code>.</p>
-<p>The <code>ExecStart</code> is where we give the command to run our service.</p>
-<p><code>Restart</code> is used to specify the behavior when our service dies due to some reason. setting it to <code>always</code> will restart our service everytime it dies, even if it exited with status code <code>0</code>. To restart only in case of failure we can set it to <code>on-failure</code>.</p>
-<h2 id="basic-systemd-commands">Basic systemd commands<a class="anchor" href="#basic-systemd-commands">#</a></h2>
-<p>To start our service</p>
-<pre><code class="language-bash">sudo systemctl start flaskapp
-</code></pre>
-<p>To stop our service</p>
-<pre><code class="language-bash">sudo systemctl stop flaskapp
-</code></pre>
-<p>To restart our service</p>
-<pre><code class="language-bash">sudo systemctl restart flaskapp
-</code></pre>
-<p>To check status of our service</p>
-<pre><code class="language-bash">sudo systemctl status flaskapp
-</code></pre>
-<p>To start our service during system startup</p>
-<pre><code class="language-bash">sudo systemctl enable flaskapp
-</code></pre>
+<p>A temporal paradox, time paradox, or time travel paradox is an apparent contradiction, or logical contradiction associated with the idea of time and time travel.</p>
+<h2 id="casual-loop">Casual Loop<a class="anchor" href="#casual-loop">#</a></h2>
+<p>The casual loop is a paradox in which a future event causes the past event which leads to the future event. For example a billiard ball moves to a time travel machine and travels to its past and strikes the past self towards the time machine. The billard ball will keep traveling to its past and striking its past self. This is a classic example of a Casual loop.</p>
+<h2 id="predestination-paradox">Predestination Paradox<a class="anchor" href="#predestination-paradox">#</a></h2>
+<p>This is when actions of the time travel become part of the history and ultimately causes the event he/she is trying to prevent to take place. Destination is predetermined and we can&rsquo;t change it even if we try. If someone&rsquo;s lover dies in a car accident, they travel back in time to reach their lover as soon as possible on the accident spot only to find out that they were the one who caused it. This is often associated with self-healing hypothesis - events altered by a time traveler will cause another chain of events which will cause the present to remain the same (time self heals itself).</p>
+<h2 id="grandfather-paradox">Grandfather Paradox<a class="anchor" href="#grandfather-paradox">#</a></h2>
+<p>This is a famous paradox where a time traveller goes to the past and kills his grandfather in his childhood, which causes one of his parents to not be born and intern the traveller not being born. But if the traveller was never born, he can&rsquo;t travel back in time to kill his grandfather. If his grandfather is not killed then the traveller will be born. We can&rsquo;t predict the outcome of this.</p>
+<h2 id="bootstrap-paradox">Bootstrap Paradox<a class="anchor" href="#bootstrap-paradox">#</a></h2>
+<p>The inventor of time machine travels back in time and gives his past self the time machine. Now, his past self already has the knowledge of time machine and he just refers that instead of inventing it. The time machine&rsquo;s origin can not be determined as it was just handed over to the person who may or may not have invented it in future.</p>
+<h2 id="fermi-paradox">Fermi Paradox<a class="anchor" href="#fermi-paradox">#</a></h2>
+<p>Fermi Paradox is the apparent contradiction for lack of evidence of alien life existence. This has been used for time traveling - If time travel were possible, where are all the visitors from the future? There are many possible answers to this. The time travellers can&rsquo;t travel to arbitrary times. They disguise themselves to avoid detection.</p>
+<h2 id="lets-kill-hitler-paradox">Let’s Kill Hitler Paradox<a class="anchor" href="#lets-kill-hitler-paradox">#</a></h2>
+<p>If someone travels to the past and kills hitler, it will cause a major change in the chain of future events, which means the future will be completely different than when the traveler hadn&rsquo;t yet traveled. This also signifies that the traveler after the chain of events will not have any reason to travel in the past to kill hitler in the first place.</p>
+<h2 id="newcombs-paradox-free-will">Newcomb&rsquo;s Paradox (free will)<a class="anchor" href="#newcombs-paradox-free-will">#</a></h2>
+<p>If people could travel to the past, with their knowledge, decision made by other people (free will) will already be known to the traveler which contradits the existence of free will. The traveler can go in the past and win all the lotteries.</p>
 
 
               
@@ -187,28 +132,23 @@ WantedBy=multi-user.target
 <ul class="tags__list">
     
     <li class="tag__item">
-        <a class="tag__link" href="http://mridulganga.github.io/tags/tech/">tech</a>
+        <a class="tag__link" href="http://mridulganga.github.io/tags/thought/">thought</a>
     </li>
     <li class="tag__item">
-        <a class="tag__link" href="http://mridulganga.github.io/tags/systemd/">systemd</a>
+        <a class="tag__link" href="http://mridulganga.github.io/tags/time/">time</a>
     </li>
     <li class="tag__item">
-        <a class="tag__link" href="http://mridulganga.github.io/tags/flask/">flask</a>
+        <a class="tag__link" href="http://mridulganga.github.io/tags/paradox/">paradox</a>
     </li></ul>
 
  <div class="pagination">
   
-    <a class="pagination__item" href="http://mridulganga.github.io/blog/no-gravity/">
+    <a class="pagination__item" href="http://mridulganga.github.io/blog/systemd-basic/">
         <span class="pagination__label">Previous Post</span>
-        <span class="pagination__title">What if there was no Gravity?</span>
+        <span class="pagination__title">Simple systemd on Linux</span>
     </a>
   
 
-  
-    <a class="pagination__item" href="http://mridulganga.github.io/blog/temporal-paradoxes/">
-      <span class="pagination__label">Next Post</span>
-      <span class="pagination__title" >Most popular Temporal Paradoxes</a>
-    </a>
   
 </div>
 
